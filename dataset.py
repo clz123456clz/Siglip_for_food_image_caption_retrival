@@ -74,7 +74,7 @@ def _make_split_filters(train_ratio: float):
 def get_train_val_loaders(
     batch_size: int,
     tr_val_ratio: float,
-    shards_glob: str = "mtf2025_web_images/00000.tar",
+    shards_glob: str = "mtf2025_web_images/*.tar",
     num_workers: int = 1,
     processor_name: str = "google/siglip-large-patch16-384",
     shuffle_buffer: int = 1000,
