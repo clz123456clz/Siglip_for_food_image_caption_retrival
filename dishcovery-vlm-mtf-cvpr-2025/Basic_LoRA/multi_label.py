@@ -16,6 +16,7 @@ caption_file = "../Test1/captions.txt"
 image_batch_size = 1024
 caption_batch_size = 8192
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+cfg = config("proj_head_en_v2_t2_qv")
 
 # === LOAD CAPTIONS ===
 with open(caption_file, "r") as f:
@@ -31,14 +32,14 @@ num_images = len(image_paths)
 print(f"✅ Loaded {num_images} image paths.")
 
 # === LOAD MODEL & PROCESSOR ===
-model_name = config("model_name")
+model_name = cfg["model_name"]
 processor = AutoProcessor.from_pretrained(model_name)
 model = SiglipModel.from_pretrained(model_name)
 model.to(device)
 model.eval()
 
 # === Restore Checkpoints from Best Epoch ===
-checkpoint_dir = config("checkpoint_dir")
+checkpoint_dir = cfg["checkpoint_dir"]
 model, start_epoch, _ = restore_checkpoint(model, checkpoint_dir, True, True, False)
 print(f"✅ Model restored. Resume from epoch {start_epoch}.")
 
@@ -107,5 +108,5 @@ data = np.ones(len(row_indices), dtype=int)
 sparse_matrix = csr_matrix((data, (row_indices, col_indices)), shape=(num_images, num_captions))
 
 # === SAVE OUTPUT ===
-save_npz("./results/sigliplarge384_multi_lora_V_l4_qv.npz", sparse_matrix)
+save_npz("./results/sigliplarge384_multi_lora_proj_head_en_v2_t2_r16_qv.npz", sparse_matrix)
 print("✅ Saved sparse matrix.")

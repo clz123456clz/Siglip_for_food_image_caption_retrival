@@ -19,4 +19,4 @@ def merge_csvs_with_offset(csv_multi, csv_single, out_csv="submission_final.csv"
     df_final.to_csv(out_csv, index=False)
     print(f"✅ merged CSV saved to {out_csv} ({len(df_final)} rows, offset={offset})")
 
-merge_csvs_with_offset("./results/sigliplarge384_multi_lora_V_l4_qv.csv", "./results/sigliplarge384_single_lora_V_l4_qv.csv", "./results/sigliplarge384_submission_lora_V_l4_qv.csv")
+merge_csvs_with_offset("./results/sigliplarge384_multi_lora_proj_head_en_v2_t2_r16_qv.csv", "./results/sigliplarge384_single_lora_proj_head_en_v2_t2_r16_qv.csv", "./results/sigliplarge384_submission_lora_proj_head_en_v2_t2_r16_qv.csv")

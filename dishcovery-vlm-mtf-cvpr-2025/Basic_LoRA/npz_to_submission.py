@@ -2,8 +2,8 @@ import numpy as np
 from scipy.sparse import csr_matrix, save_npz, load_npz
 import pandas as pd
 
-num_captions = 495
-num_images = 3823
+num_captions = 4650
+num_images = 3253
 
 def npz_to_csv(filename):
     sparse_matrix = load_npz(filename)
@@ -46,13 +46,13 @@ def npz_to_submission(filename):
 
     # print(data)
     df = pd.DataFrame({'image_id': data.keys(), 'class_ids': data.values()})
-    df.to_csv('./results/sigliplarge384_multi_lora_V_l4_qv.csv', index=False)
+    df.to_csv('./results/sigliplarge384_single_lora_proj_head_en_v2_t2_r16_qv.csv', index=False)
 
     save_path = filename.replace('.npz', '.csv')
     
     print(f'✅ csv saved in kaggle submission format: {save_path}')
 
-filename1 = "./results/sigliplarge384_multi_lora_V_l4_qv.npz"
-filename2 = "./results/sigliplarge384_single_lora_V_l4_qv.npz"
+filename1 = "./results/sigliplarge384_multi_lora_proj_head_en_v2_t2_r16_qv.npz"
+filename2 = "./results/sigliplarge384_single_lora_proj_head_en_v2_t2_r16_qv.npz"
 
-npz_to_submission(filename1)
+npz_to_submission(filename2)
