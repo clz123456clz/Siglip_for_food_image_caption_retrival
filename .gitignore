@@ -4,6 +4,7 @@ __pycache__/
 *.egg-info
 .pytest_cache
 .ipynb_checkpoints
+*_ckpt
 
 thumbs.db
 .DS_Store
@@ -12,7 +13,6 @@ thumbs.db
 Test1/
 Test2/
 
-results/
 
 *.parquet
 *.tar
@@ -28,4 +28,6 @@ mtf2025_web_images/
 mtf2025_web_images_en/
 
 *_ckpt/
+
+embeddings
 
