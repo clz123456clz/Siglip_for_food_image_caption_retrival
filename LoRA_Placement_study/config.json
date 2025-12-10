@@ -1,0 +1,295 @@
+{   
+    "V_last2_qv":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 2e-4,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_V_l2_qv_ckpt",
+        "patience": 5,
+        "last_n_layers": 2        
+    },
+
+    "V_last2_qv_en":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 2e-4,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_V_l2_pureEN_qv_ckpt",
+        "patience": 5,
+        "last_n_layers": 2
+},
+    "V_last2_qv_synth":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 2e-4,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_V_l2_syth_qv_ckpt",
+        "patience": 5,
+        "last_n_layers": 2
+    },
+    "V_last2_qv_en_mixed08":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 2e-4,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_V_l2_mixed_qv_ckpt",
+        "patience": 5,
+        "last_n_layers": 2,
+        "web_synth_ratio": 0.8,
+        "total_pairs": 110000
+    },
+
+    "V_last2_qv_en_mixed05":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 2e-4,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_V_l2_mixed05_qv_ckpt",
+        "patience": 5,
+        "last_n_layers": 2,
+        "web_synth_ratio": 0.5,
+        "total_pairs": 110000
+    },
+
+    "V_last2_qv_en_contrastive":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 2e-4,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_V_l2_pureEN_qv_contrasive_ckpt",
+        "patience": 5,
+        "last_n_layers": 2
+    },
+
+    "proj_head_en_l2":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 8e-5,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,  
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_proj_head_VT_l4_en_ckpt",
+        "patience": 5,
+        "last_n_layers": 2,
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+    }, 
+
+    "proj_head_en_l4":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 3e-5,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 16,  
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_proj_head_VT_l4_en_ckpt",
+        "patience": 5,
+        "last_n_layers": 4,
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+    }, 
+
+    "proj_head_en":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 3e-5,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 16,
+        "lora_alpha": 32,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_proj_head_VT_l6_en_ckpt",
+        "patience": 5,
+
+        "last_n_vision_layers": 6,
+        "last_n_text_layers": 2,
+
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+    },
+    "V_l2_qvo_en_nowm":
+    {
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 2e-4,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_V_l2_en_nowm_qvo_ckpt",
+        "patience": 5,
+        "last_n_layers": 2,
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+
+    }, 
+    "V_l4_qvo_en_nowm":
+    {
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 5e-4,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_V_l4_en_nowm_qvo_ckpt",
+        "patience": 5,
+        "last_n_layers": 4,
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+
+    }, 
+    "VT_l2_qvo_en_nowm":
+    {
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 5e-5,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_VT_l2_en_nowm_qvo_ckpt",
+        "patience": 5,
+        "last_n_layers": 2,
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+
+    }, 
+    "VT_l4_qvo_en_nowm":
+    {
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 5e-5,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_VT_l4_en_nowm_qvo_ckpt",
+        "patience": 5,
+        "last_n_layers": 4,
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+
+    },
+    "proj_head_en_v8_t0":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 5e-5,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 16,
+        "lora_alpha": 32,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_proj_head_v8_t0_en_ckpt",
+        "patience": 5,
+
+        "last_n_vision_layers": 8,
+        "last_n_text_layers": 0,
+
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+    }, 
+    "proj_head_en_v4_t0":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 5e-5,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 16,
+        "lora_alpha": 32,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_proj_head_v4_t0_en_ckpt",
+        "patience": 5,
+
+        "last_n_vision_layers": 4,
+        "last_n_text_layers": 0,
+
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+    },
+    "proj_head_en_v4_t0_qv":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 5e-5,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 8,
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_proj_head_v4_t0_r8_qv_ckpt",
+        "patience": 5,
+
+        "last_n_vision_layers": 4,
+        "last_n_text_layers": 0,
+
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+    }, 
+    "proj_head_en_v2_t2_qv":{
+        "batch_size": 256,
+        "train_val_ratio": 0.95,
+        "model_name": "google/siglip-large-patch16-384",
+        "lr": 5e-5,
+        "weight_decay": 0.01,
+        "epochs": 1,
+        "r": 16,
+        "lora_alpha": 32,
+        "lora_dropout": 0.05,
+        "checkpoint_dir": "siglip_lora_proj_head_v2_t2_r16_qv_ckpt",
+        "patience": 5,
+
+        "last_n_vision_layers": 2,
+        "last_n_text_layers": 0,
+
+        "web_synth_ratio": 1,
+        "total_pairs": 110000
+    }
+}
